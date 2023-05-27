@@ -1,0 +1,1284 @@
+{
+	"info": {
+		"_postman_id": "e89fa915-ae53-4181-a47b-d1fa345204de",
+		"name": "Order API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24073642"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{hosts}}/api/users",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Index",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{scheme}}://{{hosts}}/api/users",
+									"protocol": "{{scheme}}",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 May 2023 11:44:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Users found\",\n    \"data\": [\n        {\n            \"id\": \"6471db221a1c017a4a51f3d1\",\n            \"username\": \"Customer 1\",\n            \"firstName\": \"John\",\n            \"lastName\": \"Doe\",\n            \"email\": \"johndoe@mail.com\",\n            \"role\": \"customer\"\n        },\n        {\n            \"id\": \"6471ecdc6290347c572ac281\",\n            \"username\": \"Customer 2\",\n            \"firstName\": \"Jane\",\n            \"lastName\": \"Doe\",\n            \"email\": \"janedoe@mail.com\",\n            \"role\": \"customer\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{hosts}}/api/users/{id}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"{id}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Detail",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{scheme}}://{{hosts}}/api/users/6471db221a1c017a4a51f3d1",
+									"protocol": "{{scheme}}",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"6471db221a1c017a4a51f3d1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 May 2023 11:23:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"User found\",\n    \"data\": {\n        \"id\": \"6471db221a1c017a4a51f3d1\",\n        \"username\": \"Customer 1\",\n        \"firstName\": \"John\",\n        \"lastName\": \"Doe\",\n        \"email\": \"johndoe@mail.com\",\n        \"role\": \"customer\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{hosts}}/api/users/{id}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"{id}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{scheme}}://{{hosts}}/api/users/6471e7c2b6f6bb2598f6732a",
+									"protocol": "{{scheme}}",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"6471e7c2b6f6bb2598f6732a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 May 2023 11:23:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"User deleted\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"Customer 2\",\n    \"firstName\": \"Jane\",\n    \"lastName\": \"Doe\",\n    \"email\": \"janedoe@mail.com\",\n    \"role\": \"customer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{hosts}}/api/users",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"Customer 2\",\n    \"firstName\": \"Jane\",\n    \"lastName\": \"Doe\",\n    \"email\": \"janedoe@mail.com\",\n    \"role\": \"customer\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{scheme}}://{{hosts}}/api/users",
+									"protocol": "{{scheme}}",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 May 2023 11:43:24 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"User created\",\n    \"data\": {\n        \"id\": \"6471ecdc6290347c572ac281\",\n        \"username\": \"Customer 2\",\n        \"firstName\": \"Jane\",\n        \"lastName\": \"Doe\",\n        \"email\": \"janedoe@mail.com\",\n        \"role\": \"customer\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"Customer 1\",\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"email\": \"johndoe@mail.com\",\n    \"role\": \"customer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{hosts}}/api/users/{id}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"{id}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"Customer 1\",\n    \"firstName\": \"Jonathan\",\n    \"lastName\": \"Doe\",\n    \"email\": \"johndoe@mail.com\",\n    \"role\": \"customer\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{scheme}}://{{hosts}}/api/users/6471db221a1c017a4a51f3d1",
+									"protocol": "{{scheme}}",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"6471db221a1c017a4a51f3d1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 May 2023 11:43:56 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"User updated\",\n    \"data\": {\n        \"id\": \"6471db221a1c017a4a51f3d1\",\n        \"username\": \"Customer 1\",\n        \"firstName\": \"Jonathan\",\n        \"lastName\": \"Doe\",\n        \"email\": \"johndoe@mail.com\",\n        \"role\": \"customer\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{hosts}}/api/products",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Index",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{scheme}}://{{hosts}}/api/products",
+									"protocol": "{{scheme}}",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 May 2023 11:42:25 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Products found\",\n    \"data\": [\n        {\n            \"id\": \"6471db2b1a1c017a4a51f3d2\",\n            \"name\": \"Headset\"\n        },\n        {\n            \"id\": \"6471eb6130d02826c6a1d7e3\",\n            \"name\": \"Phone\"\n        },\n        {\n            \"id\": \"6471ec926290347c572ac27e\",\n            \"name\": \"Monitor\"\n        },\n        {\n            \"id\": \"6471ec996290347c572ac27f\",\n            \"name\": \"Chair\"\n        },\n        {\n            \"id\": \"6471ec9e6290347c572ac280\",\n            \"name\": \"Table\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{hosts}}/api/products/{id}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"{id}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Detail",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{scheme}}://{{hosts}}/api/products/6471db2b1a1c017a4a51f3d2",
+									"protocol": "{{scheme}}",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"6471db2b1a1c017a4a51f3d2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 May 2023 11:38:28 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Product found\",\n    \"data\": {\n        \"id\": \"6471db2b1a1c017a4a51f3d2\",\n        \"name\": \"PC\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{hosts}}/api/products/{id}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"{id}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{scheme}}://{{hosts}}/api/products/6471ebd730d02826c6a1d7e4",
+									"protocol": "{{scheme}}",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"6471ebd730d02826c6a1d7e4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 May 2023 11:39:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Product deleted\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Table\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{hosts}}/api/products",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Phone\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{scheme}}://{{hosts}}/api/products",
+									"protocol": "{{scheme}}",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 May 2023 11:37:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Product created\",\n    \"data\": {\n        \"id\": \"6471eb6130d02826c6a1d7e3\",\n        \"name\": \"Phone\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Headset\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{hosts}}/api/products/{id}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"{id}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Headset\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{scheme}}://{{hosts}}/api/products/6471db2b1a1c017a4a51f3d2",
+									"protocol": "{{scheme}}",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"6471db2b1a1c017a4a51f3d2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 May 2023 11:41:22 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Product updated\",\n    \"data\": {\n        \"id\": \"6471db2b1a1c017a4a51f3d2\",\n        \"name\": \"Headset\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{hosts}}/api/orders?userId=",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"api",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Index",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{scheme}}://{{hosts}}/api/orders?userId=",
+									"protocol": "{{scheme}}",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"api",
+										"orders"
+									],
+									"query": [
+										{
+											"key": "userId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 May 2023 11:46:30 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Orders found\",\n    \"data\": [\n        {\n            \"id\": \"6471db481a1c017a4a51f3d3\",\n            \"userId\": \"6471db221a1c017a4a51f3d1\",\n            \"productId\": \"6471db2b1a1c017a4a51f3d2\",\n            \"amount\": 5,\n            \"status\": \"pending\",\n            \"user\": {\n                \"id\": \"6471db221a1c017a4a51f3d1\",\n                \"username\": \"Customer 1\",\n                \"firstName\": \"John\",\n                \"lastName\": \"Doe\",\n                \"email\": \"johndoe@mail.com\",\n                \"role\": \"customer\"\n            },\n            \"product\": {\n                \"id\": \"6471db2b1a1c017a4a51f3d2\",\n                \"name\": \"Headset\"\n            }\n        },\n        {\n            \"id\": \"6471ed696290347c572ac282\",\n            \"userId\": \"6471ecdc6290347c572ac281\",\n            \"productId\": \"6471eb6130d02826c6a1d7e3\",\n            \"amount\": 10,\n            \"status\": \"pending\",\n            \"user\": {\n                \"id\": \"6471ecdc6290347c572ac281\",\n                \"username\": \"Customer 2\",\n                \"firstName\": \"Jane\",\n                \"lastName\": \"Doe\",\n                \"email\": \"janedoe@mail.com\",\n                \"role\": \"customer\"\n            },\n            \"product\": {\n                \"id\": \"6471eb6130d02826c6a1d7e3\",\n                \"name\": \"Phone\"\n            }\n        },\n        {\n            \"id\": \"6471ed816290347c572ac283\",\n            \"userId\": \"6471db221a1c017a4a51f3d1\",\n            \"productId\": \"6471eb6130d02826c6a1d7e3\",\n            \"amount\": 10,\n            \"status\": \"pending\",\n            \"user\": {\n                \"id\": \"6471db221a1c017a4a51f3d1\",\n                \"username\": \"Customer 1\",\n                \"firstName\": \"John\",\n                \"lastName\": \"Doe\",\n                \"email\": \"johndoe@mail.com\",\n                \"role\": \"customer\"\n            },\n            \"product\": {\n                \"id\": \"6471eb6130d02826c6a1d7e3\",\n                \"name\": \"Phone\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"646f1b41c66a9b200cd174a2\",\n    \"amount\": 5,\n    \"status\": \"pending\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{hosts}}/api/orders/{id}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"{id}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Detail",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userId\": \"646f1b41c66a9b200cd174a2\",\n    \"amount\": 5,\n    \"status\": \"pending\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{scheme}}://{{hosts}}/api/orders/6471db481a1c017a4a51f3d3",
+									"protocol": "{{scheme}}",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										"6471db481a1c017a4a51f3d3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 May 2023 11:46:46 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Order found\",\n    \"data\": {\n        \"id\": \"6471db481a1c017a4a51f3d3\",\n        \"userId\": \"6471db221a1c017a4a51f3d1\",\n        \"productId\": \"6471db2b1a1c017a4a51f3d2\",\n        \"amount\": 5,\n        \"status\": \"pending\",\n        \"user\": {\n            \"id\": \"6471db221a1c017a4a51f3d1\",\n            \"username\": \"Customer 1\",\n            \"firstName\": \"John\",\n            \"lastName\": \"Doe\",\n            \"email\": \"johndoe@mail.com\",\n            \"role\": \"customer\"\n        },\n        \"product\": {\n            \"id\": \"6471db2b1a1c017a4a51f3d2\",\n            \"name\": \"Headset\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"646f1b41c66a9b200cd174a2\",\n    \"amount\": 5,\n    \"status\": \"pending\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{hosts}}/api/orders/{id}",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"{id}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userId\": \"646f1b41c66a9b200cd174a2\",\n    \"amount\": 5,\n    \"status\": \"pending\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{scheme}}://{{hosts}}/api/orders/6471edc96290347c572ac284",
+									"protocol": "{{scheme}}",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										"6471edc96290347c572ac284"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 May 2023 11:47:31 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Order deleted\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"6471db221a1c017a4a51f3d1\",\n    \"productId\": \"6471eb6130d02826c6a1d7e3\",\n    \"amount\": 10,\n    \"status\": \"pending\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{hosts}}/api/orders",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userId\": \"6471db221a1c017a4a51f3d1\",\n    \"productId\": \"6471eb6130d02826c6a1d7e3\",\n    \"amount\": 10,\n    \"status\": \"pending\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{scheme}}://{{hosts}}/api/orders",
+									"protocol": "{{scheme}}",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"api",
+										"orders"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 May 2023 11:46:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Order created\",\n    \"data\": {\n        \"id\": \"6471ed816290347c572ac283\",\n        \"userId\": \"6471db221a1c017a4a51f3d1\",\n        \"productId\": \"6471eb6130d02826c6a1d7e3\",\n        \"amount\": 10,\n        \"status\": \"pending\",\n        \"user\": {\n            \"id\": \"6471db221a1c017a4a51f3d1\",\n            \"username\": \"Customer 1\",\n            \"firstName\": \"John\",\n            \"lastName\": \"Doe\",\n            \"email\": \"johndoe@mail.com\",\n            \"role\": \"customer\"\n        },\n        \"product\": {\n            \"id\": \"6471eb6130d02826c6a1d7e3\",\n            \"name\": \"Phone\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": 2,\n    \"status\": \"pending\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{scheme}}://{{hosts}}/api/orders/6471db481a1c017a4a51f3d3",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"6471db481a1c017a4a51f3d3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userId\": \"6471db221a1c017a4a51f3d1\",\n    \"productId\": \"6471eb6130d02826c6a1d7e3\",\n    \"amount\": 5,\n    \"status\": \"pending\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{scheme}}://{{hosts}}/api/orders/6471db481a1c017a4a51f3d3",
+									"protocol": "{{scheme}}",
+									"host": [
+										"{{hosts}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										"6471db481a1c017a4a51f3d3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 May 2023 11:55:54 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Order updated\",\n    \"data\": {\n        \"id\": \"6471db481a1c017a4a51f3d3\",\n        \"userId\": \"6471db221a1c017a4a51f3d1\",\n        \"productId\": \"6471db2b1a1c017a4a51f3d2\",\n        \"amount\": 5,\n        \"status\": \"pending\",\n        \"user\": {\n            \"id\": \"6471db221a1c017a4a51f3d1\",\n            \"username\": \"Customer 1\",\n            \"firstName\": \"John\",\n            \"lastName\": \"Doe\",\n            \"email\": \"johndoe@mail.com\",\n            \"role\": \"customer\"\n        },\n        \"product\": {\n            \"id\": \"6471db2b1a1c017a4a51f3d2\",\n            \"name\": \"Headset\"\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Root",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{scheme}}://{{hosts}}/api",
+					"protocol": "{{scheme}}",
+					"host": [
+						"{{hosts}}"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Root",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{scheme}}://{{hosts}}/api",
+							"protocol": "{{scheme}}",
+							"host": [
+								"{{hosts}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/hal+json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 May 2023 02:39:02 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_links\": {\n        \"users\": {\n            \"href\": \"http://localhost:8080/api/users{?page,size,sort}\",\n            \"templated\": true\n        },\n        \"products\": {\n            \"href\": \"http://localhost:8080/api/products{?page,size,sort}\",\n            \"templated\": true\n        },\n        \"orders\": {\n            \"href\": \"http://localhost:8080/api/orders{?page,size,sort}\",\n            \"templated\": true\n        },\n        \"profile\": {\n            \"href\": \"http://localhost:8080/api/profile\"\n        }\n    }\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "scheme",
+			"value": "http",
+			"type": "string"
+		},
+		{
+			"key": "hosts",
+			"value": "localhost:8080",
+			"type": "string"
+		}
+	]
+}
